@@ -11,8 +11,7 @@ buildscript {
 }
 
 ext {
-    lombokVersion = '1.18.34'
-    androidXAnnotation = '1.9.1'
+    lombokVersion = '1.18.36'
 }
 
 

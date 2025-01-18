@@ -17,6 +17,9 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
+import lombok.AllArgsConstructor;
+
+@AllArgsConstructor
 public final class ItunesItem {
     private static final String TAG = "Earl.ItunesItem";
     @Nullable
@@ -43,22 +46,7 @@ public final class ItunesItem {
      */
     @NonNull
     public final List<String> keywords;
-    public ItunesItem(@Nullable String author, @Nullable Boolean block, @Nullable URL image,
-                      @Nullable Integer duration, @Nullable String explicit,
-                      @Nullable Boolean isClosedCaptioned, @Nullable Integer order,
-                      @Nullable String subtitle, @Nullable String summary,
-                      @NonNull List<String> keywords) {
-        this.author = author;
-        this.block = block;
-        this.image = image;
-        this.duration = duration;
-        this.explicit = explicit;
-        this.isClosedCaptioned = isClosedCaptioned;
-        this.order = order;
-        this.subtitle = subtitle;
-        this.summary = summary;
-        this.keywords = Collections.unmodifiableList(keywords);
-    }
+
     private enum ST {author, block, duration, explicit, isClosedCaptioned, order, subtitle, summary}
 
     static class ItunesItemBuilder {

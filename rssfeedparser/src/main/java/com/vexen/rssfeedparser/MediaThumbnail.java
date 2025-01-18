@@ -11,7 +11,6 @@ import java.net.URL;
 
 public final class MediaThumbnail {
     static final String XML_TAG = "thumbnail";
-    private static final String TAG = "Earl.MediaThumbnail";
 
     @NonNull
     public final URL url;

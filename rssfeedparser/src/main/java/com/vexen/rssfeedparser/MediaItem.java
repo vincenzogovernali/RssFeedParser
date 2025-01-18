@@ -11,7 +11,6 @@ import java.util.LinkedList;
 import java.util.List;
 
 public final class MediaItem extends MediaCommon {
-    private static final String TAG = "Earl.MediaItem";
     @NonNull
     public final List<MediaGroup> groups;
     @NonNull

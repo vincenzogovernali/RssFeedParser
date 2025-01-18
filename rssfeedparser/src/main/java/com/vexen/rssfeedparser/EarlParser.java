@@ -12,11 +12,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.zip.DataFormatException;
 
-/**
- * TODO: safe mode: return partially parsed feed, ignore case of tags
- * TODO: atom in rss, like in radio-t feed
- * TODO: extensions: podfm, mrss, creativecommons, feedburner
- */
+
 public final class EarlParser {
     private EarlParser() {
     }

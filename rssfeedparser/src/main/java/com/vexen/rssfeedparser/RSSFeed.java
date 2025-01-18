@@ -18,6 +18,9 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
+import lombok.AllArgsConstructor;
+
+@AllArgsConstructor
 public final class RSSFeed implements Feed {
     static final String XML_TAG = "channel";
 
@@ -68,41 +71,6 @@ public final class RSSFeed implements Feed {
     public final MediaCommon media;
     @Nullable
     public final Content content;
-    public RSSFeed(@NonNull String title, @NonNull URL link, @NonNull String description,
-                   @Nullable String language, @Nullable String copyright,
-                   @Nullable String managingEditor, @Nullable String webMaster,
-                   @Nullable Date pubDate, @Nullable Date lastBuildDate,
-                   @NonNull List<RSSCategory> categories, @Nullable String generator,
-                   @Nullable URL docs, @Nullable RSSCloud cloud,
-                   @Nullable Integer ttl, @Nullable String rating, @Nullable RSSImage image,
-                   @Nullable RSSTextInput textInput, @NonNull List<Integer> skipHours,
-                   @NonNull List<String> skipDays, @NonNull List<RSSItem> items,
-                   @Nullable ItunesFeed itunes, @Nullable MediaCommon media,
-                   @Nullable Content content) {
-        this.title = title;
-        this.link = link;
-        this.description = description;
-        this.language = language;
-        this.copyright = copyright;
-        this.managingEditor = managingEditor;
-        this.webMaster = webMaster;
-        this.pubDate = pubDate;
-        this.lastBuildDate = lastBuildDate;
-        this.categories = Collections.unmodifiableList(categories);
-        this.generator = generator;
-        this.docs = docs;
-        this.cloud = cloud;
-        this.ttl = ttl;
-        this.rating = rating;
-        this.image = image;
-        this.textInput = textInput;
-        this.skipHours = Collections.unmodifiableList(skipHours);
-        this.skipDays = Collections.unmodifiableList(skipDays);
-        this.items = Collections.unmodifiableList(items);
-        this.itunes = itunes;
-        this.media = media;
-        this.content = content;
-    }
 
     @NonNull
     static RSSFeed read(@NonNull XmlPullParser parser, int maxItems)

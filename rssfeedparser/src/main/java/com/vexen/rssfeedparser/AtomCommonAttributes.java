@@ -7,16 +7,16 @@ import org.xmlpull.v1.XmlPullParser;
 
 import java.net.URI;
 
+import lombok.AllArgsConstructor;
+
+@AllArgsConstructor
 public class AtomCommonAttributes {
     @Nullable
     public final URI base;
     @Nullable
     public final String lang;
 
-    public AtomCommonAttributes(@Nullable URI base, @Nullable String lang) {
-        this.base = base;
-        this.lang = lang;
-    }
+
 
     AtomCommonAttributes(@NonNull XmlPullParser parser) {
         final String baseString = parser.getAttributeValue(XmlPullParser.NO_NAMESPACE, "base");

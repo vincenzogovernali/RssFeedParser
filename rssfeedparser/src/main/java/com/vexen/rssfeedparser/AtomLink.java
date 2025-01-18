@@ -11,7 +11,6 @@ import java.net.URI;
 
 public final class AtomLink extends AtomCommonAttributes implements Enclosure {
     static final String XML_TAG = "link";
-    private static final String TAG = "Earl.AtomLink";
     @NonNull
     public final URI href;
     @Nullable

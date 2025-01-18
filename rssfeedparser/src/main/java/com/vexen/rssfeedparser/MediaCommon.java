@@ -13,6 +13,9 @@ import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 
+import lombok.AllArgsConstructor;
+
+@AllArgsConstructor
 public class MediaCommon {
     @Nullable
     public final Boolean adult;
@@ -66,47 +69,7 @@ public class MediaCommon {
     public final MediaRights rights;
     @NonNull
     public final List<MediaScene> scenes;
-    public MediaCommon(@Nullable Boolean adult, @Nullable MediaRating rating,
-                       @Nullable MediaTitle title, @Nullable MediaTitle description,
-                       @NonNull List<String> keywords, @NonNull List<MediaThumbnail> thumbnails,
-                       @NonNull List<MediaCategory> categories, @Nullable MediaHash hash,
-                       @Nullable MediaPlayer player, @NonNull List<MediaCredit> credits,
-                       @Nullable MediaCopyright copyright, @NonNull List<MediaText> texts,
-                       @NonNull List<MediaRestriction> restrictions,
-                       @Nullable MediaCommunity community, @NonNull List<String> comments,
-                       @Nullable MediaEmbed embed, @NonNull List<String> responses,
-                       @NonNull List<URL> backLinks, @Nullable MediaStatus status,
-                       @NonNull List<MediaPrice> prices, @Nullable MediaLicense license,
-                       @NonNull List<MediaSubTitle> subTitles, @Nullable MediaPeerLink peerLink,
-                       @Nullable MediaLocation location, @Nullable MediaRights rights,
-                       @NonNull List<MediaScene> scenes) {
-        this.adult = adult;
-        this.rating = rating;
-        this.title = title;
-        this.description = description;
-        this.keywords = Collections.unmodifiableList(keywords);
-        this.thumbnails = Collections.unmodifiableList(thumbnails);
-        this.categories = Collections.unmodifiableList(categories);
-        this.hash = hash;
-        this.player = player;
-        this.credits = Collections.unmodifiableList(credits);
-        this.copyright = copyright;
-        this.texts = Collections.unmodifiableList(texts);
-        this.restrictions = Collections.unmodifiableList(restrictions);
-        this.community = community;
-        this.comments = Collections.unmodifiableList(comments);
-        this.embed = embed;
-        this.responses = Collections.unmodifiableList(responses);
-        this.backLinks = Collections.unmodifiableList(backLinks);
-        this.status = status;
-        this.prices = Collections.unmodifiableList(prices);
-        this.license = license;
-        this.subTitles = Collections.unmodifiableList(subTitles);
-        this.peerLink = peerLink;
-        this.location = location;
-        this.rights = rights;
-        this.scenes = Collections.unmodifiableList(scenes);
-    }
+
 
     public MediaCommon(@NonNull MediaCommon source) {
         this.adult = source.adult;

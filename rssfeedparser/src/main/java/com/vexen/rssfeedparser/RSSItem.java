@@ -17,6 +17,9 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
+import lombok.AllArgsConstructor;
+
+@AllArgsConstructor
 public final class RSSItem implements Item {
     static final String XML_TAG = "item";
     private static final String TAG = "Earl.RSSItem";
@@ -46,26 +49,7 @@ public final class RSSItem implements Item {
     public final MediaItem media;
     @Nullable
     public final Content content;
-    public RSSItem(@Nullable String title, @Nullable URL link, @Nullable String description,
-                   @Nullable String author, @NonNull List<RSSCategory> categories,
-                   @Nullable URL comments, @NonNull List<RSSEnclosure> enclosures,
-                   @Nullable RSSGuid guid, @Nullable Date pubDate, @Nullable RSSSource source,
-                   @Nullable ItunesItem itunes, @Nullable MediaItem media,
-                   @Nullable Content content) {
-        this.title = title;
-        this.link = link;
-        this.description = description;
-        this.author = author;
-        this.categories = Collections.unmodifiableList(categories);
-        this.comments = comments;
-        this.enclosures = Collections.unmodifiableList(enclosures);
-        this.guid = guid;
-        this.pubDate = pubDate;
-        this.source = source;
-        this.itunes = itunes;
-        this.media = media;
-        this.content = content;
-    }
+
 
     @NonNull
     static RSSItem read(@NonNull XmlPullParser parser) throws IOException, XmlPullParserException {

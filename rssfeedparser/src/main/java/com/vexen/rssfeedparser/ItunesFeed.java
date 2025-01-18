@@ -16,6 +16,9 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
+import lombok.AllArgsConstructor;
+
+@AllArgsConstructor
 public final class ItunesFeed {
     private static final String TAG = "Earl.ItunesFeed";
     @Nullable
@@ -38,22 +41,7 @@ public final class ItunesFeed {
     public final String subtitle;
     @Nullable
     public final String summary;
-    public ItunesFeed(@Nullable String author, @Nullable Boolean block,
-                      @NonNull List<ItunesCategory> categories, @Nullable URL image,
-                      @Nullable String explicit, @Nullable Boolean complete,
-                      @Nullable URL newFeedURL, @Nullable ItunesOwner owner,
-                      @Nullable String subtitle, @Nullable String summary) {
-        this.author = author;
-        this.block = block;
-        this.categories = Collections.unmodifiableList(categories);
-        this.image = image;
-        this.explicit = explicit;
-        this.complete = complete;
-        this.newFeedURL = newFeedURL;
-        this.owner = owner;
-        this.subtitle = subtitle;
-        this.summary = summary;
-    }
+
     private enum ST {author, block, explicit, complete, subtitle, summary}
 
     static class ItunesFeedBuilder {

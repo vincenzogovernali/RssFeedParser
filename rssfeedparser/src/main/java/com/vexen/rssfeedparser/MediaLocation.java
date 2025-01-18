@@ -34,7 +34,7 @@ public final class MediaLocation {
                 parser.getAttributeValue(XmlPullParser.NO_NAMESPACE, "description"),
                 start == null ? null : Utils.parseMediaRssTime(start),
                 end == null ? null : Utils.parseMediaRssTime(end));
-        Utils.skipTag(parser); // TODO geoRSS
+        Utils.skipTag(parser);
         return result;
     }
 }

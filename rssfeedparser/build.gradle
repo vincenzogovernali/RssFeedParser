@@ -5,22 +5,17 @@ plugins {
 
 android {
     namespace 'com.vexen.rssfeedparser'
-    compileSdkVersion 34
-    buildToolsVersion '34.0.0'
     compileSdk 34
+
     defaultConfig {
-        minSdkVersion 8
-        versionCode 1
-        versionName "1.0.0"
+        minSdk 21
+        targetSdk 34
     }
+
     buildTypes {
         release {
             minifyEnabled true
         }
-    }
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_11
-        targetCompatibility JavaVersion.VERSION_11
     }
 
 }

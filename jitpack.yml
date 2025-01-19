@@ -3,7 +3,7 @@
 # SPDX-License-Identifier: MIT
 jdk:
   - openjdk8
-chmod:
+before_install:
   - chmod +x gradlew
 install:
   - ./gradlew :parser:publishReleasePublicationToMavenLocal

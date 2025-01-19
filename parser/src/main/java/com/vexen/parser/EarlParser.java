@@ -2,15 +2,14 @@ package com.vexen.parser;
 
 import android.util.Xml;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
 
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.zip.DataFormatException;
+
+import lombok.NonNull;
 
 
 public final class EarlParser {
@@ -22,7 +21,8 @@ public final class EarlParser {
      * @param maxItems    - stop parsing after reading this much feed items
      * @return parsed RSSFeed or AtomFeed, depending on input stream or null if parsing fails
      */
-    @Nullable
+
+
     public static Feed parse(@NonNull InputStream inputStream, int maxItems) {
         try {
             return parseOrThrow(inputStream, maxItems);

@@ -1,31 +1,36 @@
 package com.vexen.parser;
 
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
 
 import java.io.IOException;
 
+import lombok.NonNull;
+
 public final class RSSCloud {
     static final String XML_TAG = "cloud";
 
     // RSS spec doesn't declare those attributes required nor it defines them optional
-    @Nullable
+
+
     public final String domain;
-    @Nullable
+
+
     public final Integer port;
-    @Nullable
+
+
     public final String path;
-    @Nullable
+
+
     public final String registerProcedure;
-    @Nullable
+
+
     public final String protocol;
 
-    public RSSCloud(@Nullable String domain, @Nullable Integer port, @Nullable String path,
-                    @Nullable String registerProcedure, @Nullable String protocol) {
+    public RSSCloud(String domain, Integer port, String path,
+
+                    String registerProcedure, String protocol) {
         this.domain = domain;
         this.port = port;
         this.path = path;

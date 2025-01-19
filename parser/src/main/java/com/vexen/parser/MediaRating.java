@@ -1,23 +1,22 @@
 package com.vexen.parser;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
 
 import java.io.IOException;
 import java.net.URI;
 
+import lombok.NonNull;
+
 public final class MediaRating {
     static final String XML_TAG = "rating";
 
-    @Nullable
+
     public final URI scheme;
     @NonNull
     public final String value;
 
-    public MediaRating(@Nullable URI scheme, @NonNull String value) {
+    public MediaRating(URI scheme, @NonNull String value) {
         this.scheme = scheme;
         this.value = value;
     }

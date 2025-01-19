@@ -1,24 +1,24 @@
 package com.vexen.parser;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
 
 import java.io.IOException;
 
+import lombok.NonNull;
+
 public final class MediaRestriction {
     static final String XML_TAG = "restriction";
 
-    @Nullable
+
     public final String relationship;
-    @Nullable
+
+
     public final String type;
     @NonNull
     public final String value;
 
-    public MediaRestriction(@Nullable String relationship, @Nullable String type,
+    public MediaRestriction(String relationship, String type,
                             @NonNull String value) {
         this.relationship = relationship;
         this.type = type;

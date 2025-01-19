@@ -2,8 +2,6 @@ package com.vexen.parser;
 
 import android.util.Log;
 
-import androidx.annotation.NonNull;
-
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
 
@@ -11,6 +9,8 @@ import java.io.IOException;
 import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
+
+import lombok.NonNull;
 
 public final class MediaGroup extends MediaCommon {
     static final String XML_TAG = "group";

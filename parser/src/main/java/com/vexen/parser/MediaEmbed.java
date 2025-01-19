@@ -1,8 +1,5 @@
 package com.vexen.parser;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
 
@@ -12,19 +9,23 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 
+import lombok.NonNull;
+
 public final class MediaEmbed {
     static final String XML_TAG = "embed";
 
-    @Nullable
+
     public final URL url;
-    @Nullable
+
+
     public final Integer width;
-    @Nullable
+
+
     public final Integer height;
     @NonNull
     public final Map<String, String> values;
 
-    public MediaEmbed(@Nullable URL url, @Nullable Integer width, @Nullable Integer height,
+    public MediaEmbed(URL url, Integer width, Integer height,
                       @NonNull Map<String, String> values) {
         this.url = url;
         this.width = width;

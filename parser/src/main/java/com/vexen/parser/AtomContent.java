@@ -1,21 +1,20 @@
 package com.vexen.parser;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
 
 import java.io.IOException;
 import java.net.URI;
 
+import lombok.NonNull;
+
 public final class AtomContent extends AtomText {
     static final String XML_TAG = "content";
 
-    @Nullable
+
     public final URI src;
 
-    public AtomContent(@Nullable URI src, @NonNull AtomText atomText) {
+    public AtomContent(URI src, @NonNull AtomText atomText) {
         super(atomText);
         this.src = src;
     }

@@ -2,27 +2,29 @@ package com.vexen.parser;
 
 import android.util.Log;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
 
 import java.io.IOException;
 import java.net.URI;
 
+import lombok.NonNull;
+
 public final class AtomPerson extends AtomCommonAttributes {
     private static final String TAG = "RssFeed.AtomPerson";
 
     @NonNull
     public final String name;
-    @Nullable
+
+
     public final URI uri;
-    @Nullable
+
+
     public final String email;
 
-    public AtomPerson(@Nullable AtomCommonAttributes atomCommonAttributes, @NonNull String name,
-                      @Nullable URI uri, @Nullable String email) {
+    public AtomPerson(AtomCommonAttributes atomCommonAttributes, @NonNull String name,
+
+                      URI uri, String email) {
         super(atomCommonAttributes);
         this.name = name;
         this.uri = uri;

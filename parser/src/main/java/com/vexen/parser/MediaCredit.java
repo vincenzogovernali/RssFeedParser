@@ -1,25 +1,25 @@
 package com.vexen.parser;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
 
 import java.io.IOException;
 import java.net.URI;
 
+import lombok.NonNull;
+
 public final class MediaCredit {
     static final String XML_TAG = "credit";
 
-    @Nullable
+
     public final String role;
-    @Nullable
+
+
     public final URI scheme;
     @NonNull
     public final String value;
 
-    public MediaCredit(@Nullable String role, @Nullable URI scheme, @NonNull String value) {
+    public MediaCredit(String role, URI scheme, @NonNull String value) {
         this.role = role;
         this.scheme = scheme;
         this.value = value;

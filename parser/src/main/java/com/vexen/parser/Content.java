@@ -2,13 +2,12 @@ package com.vexen.parser;
 
 import android.util.Log;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
 
 import java.io.IOException;
+
+import lombok.NonNull;
 
 public final class Content {
     private static final String TAG = "Earl.Content";
@@ -35,7 +34,7 @@ public final class Content {
             }
         }
 
-        @Nullable
+
         Content build() {
             return encodedValue == null ? null : new Content(encodedValue);
         }

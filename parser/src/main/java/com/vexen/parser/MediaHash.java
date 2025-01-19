@@ -1,22 +1,21 @@
 package com.vexen.parser;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
 
 import java.io.IOException;
 
+import lombok.NonNull;
+
 public final class MediaHash {
     static final String XML_TAG = "hash";
 
-    @Nullable
+
     public final String algo;
     @NonNull
     public final String value;
 
-    public MediaHash(@Nullable String algo, @NonNull String value) {
+    public MediaHash(String algo, @NonNull String value) {
         this.algo = algo;
         this.value = value;
     }

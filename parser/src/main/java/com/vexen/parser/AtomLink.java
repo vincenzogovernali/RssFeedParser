@@ -1,32 +1,38 @@
 package com.vexen.parser;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
 
 import java.io.IOException;
 import java.net.URI;
 
+import lombok.NonNull;
+
 public final class AtomLink extends AtomCommonAttributes implements Enclosure {
     static final String XML_TAG = "link";
     @NonNull
     public final URI href;
-    @Nullable
+
+
     public final String rel;
-    @Nullable
+
+
     public final String type;
-    @Nullable
+
+
     public final String hreflang;
-    @Nullable
+
+
     public final String title;
-    @Nullable
+
+
     public final Integer length;
 
-    public AtomLink(@Nullable AtomCommonAttributes atomCommonAttributes, @NonNull URI href,
-                    @Nullable String rel, @Nullable String type, @Nullable String hreflang,
-                    @Nullable String title, @Nullable Integer length) {
+    public AtomLink(AtomCommonAttributes atomCommonAttributes, @NonNull URI href,
+
+                    String rel, String type, String hreflang,
+
+                    String title, Integer length) {
         super(atomCommonAttributes);
         this.href = href;
         this.rel = rel;
@@ -59,13 +65,13 @@ public final class AtomLink extends AtomCommonAttributes implements Enclosure {
         return href.toString();
     }
 
-    @Nullable
+
     @Override
     public Integer getLength() {
         return length;
     }
 
-    @Nullable
+
     @Override
     public String getType() {
         return type;

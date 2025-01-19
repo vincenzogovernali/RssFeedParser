@@ -1,52 +1,69 @@
 package com.vexen.parser;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
 
 import java.io.IOException;
 import java.net.URL;
 
+import lombok.NonNull;
+
 public final class MediaContent extends MediaCommon {
     static final String XML_TAG = "content";
 
-    @Nullable
+
     public final URL url;
-    @Nullable
+
+
     public final Integer fileSize;
-    @Nullable
+
+
     public final String type;
-    @Nullable
+
+
     public final String medium;
-    @Nullable
+
+
     public final Boolean isDefault;
-    @Nullable
+
+
     public final String expression;
-    @Nullable
+
+
     public final Integer bitrate;
-    @Nullable
+
+
     public final Integer framerate;
-    @Nullable
+
+
     public final Integer samplingrate;
-    @Nullable
+
+
     public final Integer channels;
-    @Nullable
+
+
     public final Integer duration;
-    @Nullable
+
+
     public final Integer height;
-    @Nullable
+
+
     public final Integer width;
-    @Nullable
+
+
     public final String lang;
 
-    public MediaContent(@Nullable URL url, @Nullable Integer fileSize, @Nullable String type,
-                        @Nullable String medium, @Nullable Boolean isDefault,
-                        @Nullable String expression, @Nullable Integer bitrate,
-                        @Nullable Integer framerate, @Nullable Integer samplingrate,
-                        @Nullable Integer channels, @Nullable Integer duration,
-                        @Nullable Integer height, @Nullable Integer width, @Nullable String lang,
+    public MediaContent(URL url, Integer fileSize, String type,
+
+                        String medium, Boolean isDefault,
+
+                        String expression, Integer bitrate,
+
+                        Integer framerate, Integer samplingrate,
+
+                        Integer channels, Integer duration,
+
+                        Integer height, Integer width, String lang,
                         @NonNull MediaCommon source) {
         super(source);
         this.url = url;

@@ -1,8 +1,5 @@
 package com.vexen.parser;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
 
@@ -13,16 +10,21 @@ import java.util.LinkedList;
 import java.util.List;
 
 import lombok.AllArgsConstructor;
+import lombok.NonNull;
 
 @AllArgsConstructor
 public class MediaCommon {
-    @Nullable
+
+
     public final Boolean adult;
-    @Nullable
+
+
     public final MediaRating rating;
-    @Nullable
+
+
     public final MediaTitle title;
-    @Nullable
+
+
     public final MediaTitle description;
     @NonNull
     public final List<String> keywords;
@@ -30,41 +32,51 @@ public class MediaCommon {
     public final List<MediaThumbnail> thumbnails;
     @NonNull
     public final List<MediaCategory> categories;
-    @Nullable
+
+
     public final MediaHash hash;
-    @Nullable
+
+
     public final MediaPlayer player;
     @NonNull
     public final List<MediaCredit> credits;
-    @Nullable
+
+
     public final MediaCopyright copyright;
     @NonNull
     public final List<MediaText> texts;
     @NonNull
     public final List<MediaRestriction> restrictions;
-    @Nullable
+
+
     public final MediaCommunity community;
     @NonNull
     public final List<String> comments;
-    @Nullable
+
+
     public final MediaEmbed embed;
     @NonNull
     public final List<String> responses;
     @NonNull
     public final List<URL> backLinks;
-    @Nullable
+
+
     public final MediaStatus status;
     @NonNull
     public final List<MediaPrice> prices;
-    @Nullable
+
+
     public final MediaLicense license;
     @NonNull
     public final List<MediaSubTitle> subTitles;
-    @Nullable
+
+
     public final MediaPeerLink peerLink;
-    @Nullable
+
+
     public final MediaLocation location;
-    @Nullable
+
+
     public final MediaRights rights;
     @NonNull
     public final List<MediaScene> scenes;

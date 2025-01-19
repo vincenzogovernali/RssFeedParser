@@ -3,9 +3,6 @@ package com.vexen.parser;
 
 import android.util.Log;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
 
@@ -15,6 +12,8 @@ import java.util.Collections;
 import java.util.Date;
 import java.util.LinkedList;
 import java.util.List;
+
+import lombok.NonNull;
 
 public final class AtomFeed extends AtomCommonAttributes implements Feed {
     static final String XML_TAG = "feed";
@@ -34,31 +33,42 @@ public final class AtomFeed extends AtomCommonAttributes implements Feed {
     public final List<AtomCategory> categories;
     @NonNull
     public final List<AtomPerson> contributors;
-    @Nullable
+
+
     public final MediaCommon media;
-    @Nullable
+
+
     public final AtomGenerator generator;
-    @Nullable
+
+
     public final URI icon;
-    @Nullable
+
+
     public final AtomDate published;
-    @Nullable
+
+
     public final URI logo;
-    @Nullable
+
+
     public final AtomText rights;
-    @Nullable
+
+
     public final AtomText subtitle;
     @NonNull
     public final List<AtomEntry> entries;
 
-    public AtomFeed(@Nullable AtomCommonAttributes atomCommonAttributes, @NonNull URI id,
+    public AtomFeed(AtomCommonAttributes atomCommonAttributes, @NonNull URI id,
                     @NonNull AtomText title, @NonNull AtomDate updated,
                     @NonNull List<AtomPerson> authors,
-                    @NonNull List<AtomPerson> contributors, @Nullable AtomGenerator generator,
-                    @Nullable URI icon, @Nullable URI logo, @Nullable AtomText rights,
-                    @Nullable AtomText subtitle, @NonNull List<AtomLink> links,
-                    @Nullable AtomDate published, @NonNull List<AtomCategory> categories,
-                    @Nullable MediaCommon media, @NonNull List<AtomEntry> entries) {
+                    @NonNull List<AtomPerson> contributors, AtomGenerator generator,
+
+                    URI icon, URI logo, AtomText rights,
+
+                    AtomText subtitle, @NonNull List<AtomLink> links,
+
+                    AtomDate published, @NonNull List<AtomCategory> categories,
+
+                    MediaCommon media, @NonNull List<AtomEntry> entries) {
         super(atomCommonAttributes);
         this.id = id;
         this.published = published;
@@ -181,7 +191,7 @@ public final class AtomFeed extends AtomCommonAttributes implements Feed {
                 mediaBuilder == null ? null : mediaBuilder.build(), entries);
     }
 
-    @Nullable
+
     @Override
     public String getLink() {
         if (links.isEmpty()) {
@@ -215,13 +225,13 @@ public final class AtomFeed extends AtomCommonAttributes implements Feed {
         return links.get(0).href.toString();
     }
 
-    @Nullable
+
     @Override
     public Date getPublicationDate() {
         return published.date;
     }
 
-    @Nullable
+
     @Override
     public Date getUpdatedDate() {
         return updated.date;
@@ -233,13 +243,13 @@ public final class AtomFeed extends AtomCommonAttributes implements Feed {
         return title.value;
     }
 
-    @Nullable
+
     @Override
     public String getDescription() {
         return subtitle == null ? null : subtitle.value;
     }
 
-    @Nullable
+
     @Override
     public String getCopyright() {
         if (rights != null) {
@@ -253,7 +263,7 @@ public final class AtomFeed extends AtomCommonAttributes implements Feed {
         }
     }
 
-    @Nullable
+
     @Override
     public String getImageLink() {
         if (logo != null) {
@@ -267,7 +277,7 @@ public final class AtomFeed extends AtomCommonAttributes implements Feed {
         }
     }
 
-    @Nullable
+
     @Override
     public String getAuthor() {
         if (authors.isEmpty()) {

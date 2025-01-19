@@ -1,31 +1,34 @@
 package com.vexen.parser;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
 
 import java.io.IOException;
 import java.net.URL;
 
+import lombok.NonNull;
+
 public final class MediaThumbnail {
     static final String XML_TAG = "thumbnail";
 
     @NonNull
     public final URL url;
-    @Nullable
+
+
     public final Integer width;
-    @Nullable
+
+
     public final Integer height;
     /**
      * In milliseconds
      */
-    @Nullable
+
+
     public final Integer time;
 
-    public MediaThumbnail(@NonNull URL url, @Nullable Integer width, @Nullable Integer height,
-                          @Nullable Integer time) {
+    public MediaThumbnail(@NonNull URL url, Integer width, Integer height,
+
+                          Integer time) {
         this.url = url;
         this.width = width;
         this.height = height;

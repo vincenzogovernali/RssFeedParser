@@ -1,25 +1,26 @@
 package com.vexen.parser;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
 
 import java.io.IOException;
 import java.net.URL;
 
+import lombok.NonNull;
+
 public final class MediaPlayer {
     static final String XML_TAG = "player";
 
     @NonNull
     public final URL url;
-    @Nullable
+
+
     public final Integer height;
-    @Nullable
+
+
     public final Integer width;
 
-    public MediaPlayer(@NonNull URL url, @Nullable Integer height, @Nullable Integer width) {
+    public MediaPlayer(@NonNull URL url, Integer height, Integer width) {
         this.url = url;
         this.height = height;
         this.width = width;

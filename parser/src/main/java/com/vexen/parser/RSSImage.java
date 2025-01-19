@@ -3,9 +3,6 @@ package com.vexen.parser;
 
 import android.util.Log;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
 
@@ -14,23 +11,29 @@ import java.net.URL;
 import java.util.EnumMap;
 import java.util.Map;
 
+import lombok.NonNull;
+
 public final class RSSImage {
     static final String XML_TAG = "image";
     private static final String TAG = "Earl.RSSImage";
     @NonNull
     public final String title;
-    @Nullable
+
+
     public final String description;
     @NonNull
     public final URL link;
     @NonNull
     public final URL url;
-    @Nullable
+
+
     public final Integer width;
-    @Nullable
+
+
     public final Integer height;
-    public RSSImage(@NonNull String title, @Nullable String description, @NonNull URL link,
-                    @NonNull URL url, @Nullable Integer width, @Nullable Integer height) {
+
+    public RSSImage(@NonNull String title, String description, @NonNull URL link,
+                    @NonNull URL url, Integer width, Integer height) {
         this.title = title;
         this.description = description;
         this.link = link;

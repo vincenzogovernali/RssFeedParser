@@ -2,8 +2,6 @@ package com.vexen.parser;
 
 import android.util.Log;
 
-import androidx.annotation.NonNull;
-
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
 
@@ -11,6 +9,8 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.EnumMap;
 import java.util.Map;
+
+import lombok.NonNull;
 
 public final class RSSTextInput {
     static final String XML_TAG = "textInput";

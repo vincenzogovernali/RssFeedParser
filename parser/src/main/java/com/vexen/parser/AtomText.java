@@ -1,20 +1,20 @@
 package com.vexen.parser;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
 
 import java.io.IOException;
 
+import lombok.NonNull;
+
 public class AtomText extends AtomCommonAttributes {
-    @Nullable
+
+
     public final String type;
     @NonNull
     public final String value;
 
-    public AtomText(@Nullable AtomCommonAttributes atomCommonAttributes, @Nullable String type,
+    public AtomText(AtomCommonAttributes atomCommonAttributes, String type,
                     @NonNull String value) {
         super(atomCommonAttributes);
         this.type = type;

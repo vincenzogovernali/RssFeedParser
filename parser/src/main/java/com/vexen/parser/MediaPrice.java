@@ -1,27 +1,30 @@
 package com.vexen.parser;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
 
 import java.io.IOException;
 
+import lombok.NonNull;
+
 public final class MediaPrice {
     static final String XML_TAG = "price";
 
-    @Nullable
+
     public final String type;
-    @Nullable
+
+
     public final String info;
-    @Nullable
+
+
     public final String price;
-    @Nullable
+
+
     public final String currency;
 
-    public MediaPrice(@Nullable String type, @Nullable String info, @Nullable String price,
-                      @Nullable String currency) {
+    public MediaPrice(String type, String info, String price,
+
+                      String currency) {
         this.type = type;
         this.info = info;
         this.price = price;

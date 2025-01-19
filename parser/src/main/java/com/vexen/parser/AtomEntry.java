@@ -2,9 +2,6 @@ package com.vexen.parser;
 
 import android.util.Log;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
 
@@ -14,6 +11,8 @@ import java.util.Collections;
 import java.util.Date;
 import java.util.LinkedList;
 import java.util.List;
+
+import lombok.NonNull;
 
 public final class AtomEntry extends AtomCommonAttributes implements Item {
     static final String XML_TAG = "entry";
@@ -27,32 +26,40 @@ public final class AtomEntry extends AtomCommonAttributes implements Item {
     public final AtomDate updated;
     @NonNull
     public final List<AtomPerson> authors;
-    @Nullable
+
+
     public final AtomContent content;
     @NonNull
     public final List<AtomLink> links;
-    @Nullable
+
+
     public final AtomText summary;
     @NonNull
     public final List<AtomCategory> categories;
     @NonNull
     public final List<AtomPerson> contributors;
-    @Nullable
+
+
     public final AtomDate published;
-    @Nullable
+
+
     public final AtomFeed source;
-    @Nullable
+
+
     public final AtomText rights;
-    @Nullable
+
+
     public final MediaItem media;
 
-    public AtomEntry(@Nullable AtomCommonAttributes atomCommonAttributes, @NonNull URI id,
+    public AtomEntry(AtomCommonAttributes atomCommonAttributes, @NonNull URI id,
                      @NonNull AtomText title, @NonNull AtomDate updated,
-                     @NonNull List<AtomPerson> authors, @Nullable AtomContent content,
-                     @NonNull List<AtomLink> links, @Nullable AtomText summary,
+                     @NonNull List<AtomPerson> authors, AtomContent content,
+                     @NonNull List<AtomLink> links, AtomText summary,
                      @NonNull List<AtomCategory> categories, @NonNull List<AtomPerson> contributors,
-                     @Nullable AtomDate published, @Nullable AtomFeed source,
-                     @Nullable AtomText rights, @Nullable MediaItem media) {
+
+                     AtomDate published, AtomFeed source,
+
+                     AtomText rights, MediaItem media) {
         super(atomCommonAttributes);
         this.id = id;
         this.title = title;
@@ -164,7 +171,7 @@ public final class AtomEntry extends AtomCommonAttributes implements Item {
                 summary, categories, contributors, published, source, rights, mediaBuilder == null ? null : mediaBuilder.build());
     }
 
-    @Nullable
+
     @Override
     public String getLink() {
         if (links.isEmpty()) {
@@ -210,13 +217,13 @@ public final class AtomEntry extends AtomCommonAttributes implements Item {
         return title.value;
     }
 
-    @Nullable
+
     @Override
     public String getDescription() {
         return summary == null ? (content == null ? null : content.value) : summary.value;
     }
 
-    @Nullable
+
     @Override
     public String getImageLink() {
         for (AtomLink link : links) {
@@ -238,7 +245,7 @@ public final class AtomEntry extends AtomCommonAttributes implements Item {
 
     }
 
-    @Nullable
+
     @Override
     public String getAuthor() {
         if (authors.isEmpty()) {

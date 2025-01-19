@@ -2,9 +2,6 @@ package com.vexen.parser;
 
 import android.util.Log;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
 
@@ -17,27 +14,37 @@ import java.util.List;
 import java.util.Map;
 
 import lombok.AllArgsConstructor;
+import lombok.NonNull;
 
 @AllArgsConstructor
 public final class ItunesItem {
     private static final String TAG = "Earl.ItunesItem";
-    @Nullable
+
+
     public final String author;
-    @Nullable
+
+
     public final Boolean block;
-    @Nullable
+
+
     public final URL image;
-    @Nullable
+
+
     public final Integer duration;
-    @Nullable
+
+
     public final String explicit;
-    @Nullable
+
+
     public final Boolean isClosedCaptioned;
-    @Nullable
+
+
     public final Integer order;
-    @Nullable
+
+
     public final String subtitle;
-    @Nullable
+
+
     public final String summary;
     /**
      * Allows users to search on text keywords

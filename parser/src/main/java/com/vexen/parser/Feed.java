@@ -1,34 +1,34 @@
 package com.vexen.parser;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-
 import java.util.Date;
 import java.util.List;
 
+import lombok.NonNull;
+
 public interface Feed {
-    @Nullable
+
+
     String getLink();
 
-    @Nullable
+
     Date getPublicationDate();
 
-    @Nullable
+
     Date getUpdatedDate();
 
     @NonNull
     String getTitle();
 
-    @Nullable
+
     String getDescription();
 
-    @Nullable
+
     String getCopyright();
 
-    @Nullable
+
     String getImageLink();
 
-    @Nullable
+
     String getAuthor();
 
     @NonNull

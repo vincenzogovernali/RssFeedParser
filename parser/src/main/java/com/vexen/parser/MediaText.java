@@ -1,29 +1,32 @@
 package com.vexen.parser;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
 
 import java.io.IOException;
 
+import lombok.NonNull;
+
 public final class MediaText {
     static final String XML_TAG = "text";
 
-    @Nullable
+
     public final String type;
-    @Nullable
+
+
     public final String lang;
-    @Nullable
+
+
     public final Integer start;
-    @Nullable
+
+
     public final Integer end;
     @NonNull
     public final String value;
 
-    public MediaText(@Nullable String type, @Nullable String lang, @Nullable Integer start,
-                     @Nullable Integer end, @NonNull String value) {
+    public MediaText(String type, String lang, Integer start,
+
+                     Integer end, @NonNull String value) {
         this.type = type;
         this.lang = lang;
         this.start = start;

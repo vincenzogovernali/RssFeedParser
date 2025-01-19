@@ -1,23 +1,22 @@
 package com.vexen.parser;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
 
 import java.io.IOException;
 import java.net.URL;
 
+import lombok.NonNull;
+
 public final class MediaPeerLink {
     static final String XML_TAG = "peerLink";
 
-    @Nullable
+
     public final String type;
     @NonNull
     public final URL href;
 
-    public MediaPeerLink(@Nullable String type, @NonNull URL href) {
+    public MediaPeerLink(String type, @NonNull URL href) {
         this.type = type;
         this.href = href;
     }

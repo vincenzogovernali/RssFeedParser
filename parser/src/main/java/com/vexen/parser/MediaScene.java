@@ -2,29 +2,32 @@ package com.vexen.parser;
 
 import android.util.Log;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
 
 import java.io.IOException;
 
+import lombok.NonNull;
+
 public final class MediaScene {
     static final String XML_TAG = "scene";
     private static final String TAG = "Earl.MediaScene";
 
-    @Nullable
+
     public final String sceneTitle;
-    @Nullable
+
+
     public final String sceneDescription;
-    @Nullable
+
+
     public final Integer sceneStartTime;
-    @Nullable
+
+
     public final Integer sceneEndTime;
 
-    public MediaScene(@Nullable String sceneTitle, @Nullable String sceneDescription,
-                      @Nullable Integer sceneStartTime, @Nullable Integer sceneEndTime) {
+    public MediaScene(String sceneTitle, String sceneDescription,
+
+                      Integer sceneStartTime, Integer sceneEndTime) {
         this.sceneTitle = sceneTitle;
         this.sceneDescription = sceneDescription;
         this.sceneStartTime = sceneStartTime;

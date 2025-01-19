@@ -1,26 +1,28 @@
 package com.vexen.parser;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
 
 import java.io.IOException;
 import java.net.URI;
 
+import lombok.NonNull;
+
 public final class AtomCategory extends AtomCommonAttributes {
     static final String XML_TAG = "category";
 
     @NonNull
     public final String term;
-    @Nullable
+
+
     public final URI scheme;
-    @Nullable
+
+
     public final String label;
 
-    public AtomCategory(@Nullable AtomCommonAttributes atomCommonAttributes, @NonNull String term,
-                        @Nullable URI scheme, @Nullable String label) {
+    public AtomCategory(AtomCommonAttributes atomCommonAttributes, @NonNull String term,
+
+                        URI scheme, String label) {
         super(atomCommonAttributes);
         this.term = term;
         this.scheme = scheme;

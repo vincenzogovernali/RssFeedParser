@@ -1,31 +1,31 @@
 package com.vexen.parser;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-
 import java.util.Date;
 import java.util.List;
 
+import lombok.NonNull;
+
 public interface Item {
-    @Nullable
+
+
     String getLink();
 
-    @Nullable
+
     Date getPublicationDate();
 
-    @Nullable
+
     String getTitle();
 
-    @Nullable
+
     String getDescription();
 
-    @Nullable
+
     String getImageLink();
 
-    @Nullable
+
     String getAuthor();
 
-    @Nullable
+
     String getId();
 
     @NonNull

@@ -2,9 +2,6 @@ package com.vexen.parser;
 
 import android.util.Log;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
 
@@ -14,16 +11,21 @@ import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 
+import lombok.NonNull;
+
 public final class MediaCommunity {
     static final String XML_TAG = "community";
     private static final String TAG = "Earl.MediaCommunity";
-    @Nullable
+
+
     public final StarRating starRating;
-    @Nullable
+
+
     public final Statistics statistics;
     @NonNull
     public final List<String> tags;
-    public MediaCommunity(@Nullable StarRating starRating, @Nullable Statistics statistics,
+
+    public MediaCommunity(StarRating starRating, Statistics statistics,
                           @NonNull List<String> tags) {
         this.starRating = starRating;
         this.statistics = statistics;
@@ -72,17 +74,22 @@ public final class MediaCommunity {
 
     public static class StarRating {
         static final String XML_TAG = "starRating";
-        @Nullable
+
+
         public final String average;
-        @Nullable
+
+
         public final Integer count;
-        @Nullable
+
+
         public final Integer min;
-        @Nullable
+
+
         public final Integer max;
 
-        public StarRating(@Nullable String average, @Nullable Integer count, @Nullable Integer min,
-                          @Nullable Integer max) {
+        public StarRating(String average, Integer count, Integer min,
+
+                          Integer max) {
             this.average = average;
             this.count = count;
             this.min = min;
@@ -93,12 +100,13 @@ public final class MediaCommunity {
     public static class Statistics {
         static final String XML_TAG = "statistics";
 
-        @Nullable
+
         public final Integer views;
-        @Nullable
+
+
         public final Integer favorites;
 
-        public Statistics(@Nullable Integer views, @Nullable Integer favorites) {
+        public Statistics(Integer views, Integer favorites) {
             this.views = views;
             this.favorites = favorites;
         }

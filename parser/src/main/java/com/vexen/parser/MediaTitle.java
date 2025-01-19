@@ -1,20 +1,20 @@
 package com.vexen.parser;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
 
 import java.io.IOException;
 
+import lombok.NonNull;
+
 public final class MediaTitle {
-    @Nullable
+
+
     public final String type;
     @NonNull
     public final String value;
 
-    public MediaTitle(@Nullable String type, @NonNull String value) {
+    public MediaTitle(String type, @NonNull String value) {
         this.type = type;
         this.value = value;
     }

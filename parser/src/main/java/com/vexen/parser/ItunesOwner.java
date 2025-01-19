@@ -2,24 +2,24 @@ package com.vexen.parser;
 
 import android.util.Log;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
 
 import java.io.IOException;
 
+import lombok.NonNull;
+
 public final class ItunesOwner {
     static final String XML_TAG = "owner";
     private static final String TAG = "Earl.ItunesOwner";
 
-    @Nullable
+
     public final String name;
-    @Nullable
+
+
     public final String eMail;
 
-    public ItunesOwner(@Nullable String name, @Nullable String eMail) {
+    public ItunesOwner(String name, String eMail) {
         this.name = name;
         this.eMail = eMail;
     }

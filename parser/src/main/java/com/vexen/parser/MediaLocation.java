@@ -1,25 +1,27 @@
 package com.vexen.parser;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
 
 import java.io.IOException;
 
+import lombok.NonNull;
+
 public final class MediaLocation {
     static final String XML_TAG = "location";
 
-    @Nullable
+
     public final String description;
-    @Nullable
+
+
     public final Integer start;
-    @Nullable
+
+
     public final Integer end;
 
-    public MediaLocation(@Nullable String description, @Nullable Integer start,
-                         @Nullable Integer end) {
+    public MediaLocation(String description, Integer start,
+
+                         Integer end) {
         this.description = description;
         this.start = start;
         this.end = end;

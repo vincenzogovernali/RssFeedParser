@@ -1,22 +1,22 @@
 package com.vexen.parser;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
 
 import java.io.IOException;
+
+import lombok.NonNull;
 
 public final class RSSCategory {
     static final String XML_TAG = "category";
 
     @NonNull
     public final String value;
-    @Nullable
+
+
     public final String domain;
 
-    public RSSCategory(@NonNull String value, @Nullable String domain) {
+    public RSSCategory(@NonNull String value, String domain) {
         this.value = value;
         this.domain = domain;
     }

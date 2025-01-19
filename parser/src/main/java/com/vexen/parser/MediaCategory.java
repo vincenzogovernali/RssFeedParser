@@ -1,25 +1,25 @@
 package com.vexen.parser;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
 
 import java.io.IOException;
 import java.net.URI;
 
+import lombok.NonNull;
+
 public final class MediaCategory {
     static final String XML_TAG = "category";
 
-    @Nullable
+
     public final URI scheme;
-    @Nullable
+
+
     public final String label;
     @NonNull
     public final String value;
 
-    public MediaCategory(@Nullable URI scheme, @Nullable String label, @NonNull String value) {
+    public MediaCategory(URI scheme, String label, @NonNull String value) {
         this.scheme = scheme;
         this.label = label;
         this.value = value;

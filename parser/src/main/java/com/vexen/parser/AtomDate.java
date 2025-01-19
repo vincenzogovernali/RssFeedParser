@@ -2,14 +2,13 @@ package com.vexen.parser;
 
 import android.util.Log;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
 
 import java.io.IOException;
 import java.util.Date;
+
+import lombok.NonNull;
 
 public final class AtomDate extends AtomCommonAttributes {
     private static final String TAG = "Earl.AtomDate";
@@ -17,7 +16,7 @@ public final class AtomDate extends AtomCommonAttributes {
     @NonNull
     public final Date date;
 
-    public AtomDate(@Nullable AtomCommonAttributes source, @NonNull Date date) {
+    public AtomDate(AtomCommonAttributes source, @NonNull Date date) {
         super(source);
         this.date = date;
     }

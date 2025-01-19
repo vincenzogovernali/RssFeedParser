@@ -2,9 +2,6 @@ package com.vexen.parser;
 
 import android.util.Log;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-
 import com.vexen.parser.tools.NPTParser;
 
 import org.xmlpull.v1.XmlPullParser;
@@ -21,6 +18,8 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 import java.util.TimeZone;
+
+import lombok.NonNull;
 
 final class Utils {
     static final String ATOM_NAMESPACE = "http://www.w3.org/2005/Atom";
@@ -64,7 +63,8 @@ final class Utils {
      * @param dateString date (as string) to parse
      * @return parsed date on success, NULL otherwise
      */
-    @Nullable
+
+
     static Date parseDate(@NonNull String dateString) {
         final String trimmedDate = dateString.trim();
         Date date = parseRFC822Date(trimmedDate);
@@ -80,7 +80,7 @@ final class Utils {
         return date;
     }
 
-    @Nullable
+
     private static Date parseRFC822Date(@NonNull String dateString) {
         try {
             return rfc822DateTimeFormat.parse(dateString);
@@ -89,7 +89,7 @@ final class Utils {
         }
     }
 
-    @Nullable
+
     private static Date parseISO8601Date(@NonNull String dateString) {
         try {
             return iso8601DateTimeFormat.parse(patchISO8601Date(dateString));
@@ -141,7 +141,8 @@ final class Utils {
     /**
      * based on: http://cokere.com/RFC3339Date.txt
      */
-    @Nullable
+
+
     private static Date parseRFC3339Date(@NonNull String string) {
         try {
             //if there is no time zone, we don't need to do any special parsing.
@@ -170,7 +171,7 @@ final class Utils {
         }
     }
 
-    @Nullable
+
     static Integer parseRFC2326NPT(@NonNull String string) {
         try {
             return (int) new NPTParser(string).parse();
@@ -184,7 +185,8 @@ final class Utils {
      * @param dateString time string to parse
      * @return episode duration in seconds or null if parsing fails
      */
-    @Nullable
+
+
     static Integer parseItunesDuration(@NonNull String dateString) {
         for (DateFormat format : itunesDurationFormats) {
             try {
@@ -197,7 +199,7 @@ final class Utils {
         return tryParseInt(dateString);
     }
 
-    @Nullable
+
     static Integer parseMediaRssTime(@NonNull String time) {
         // MRSS spec doesn't always clarify which time format is used.
         // In examples it looks quite like itunes duration.
@@ -246,8 +248,8 @@ final class Utils {
         }
     }
 
-    @Nullable
-    static Integer tryParseInt(@Nullable String string) {
+
+    static Integer tryParseInt(String string) {
         if (string == null) {
             return null;
         } else {
@@ -261,7 +263,7 @@ final class Utils {
     }
 
     @NonNull
-    static Integer nonNullInt(@Nullable String string) {
+    static Integer nonNullInt(String string) {
         if (string == null) {
             Log.w(TAG, "Unexpectedly got null string. -1 returned", new NullPointerException());
             return -1;
@@ -275,7 +277,7 @@ final class Utils {
     }
 
     @NonNull
-    static String nonNullString(@Nullable String string) {
+    static String nonNullString(String string) {
         if (string == null) {
             Log.w(TAG, "Unexpectedly got null string. Replaced with empty", new NullPointerException());
             return "";
@@ -284,8 +286,8 @@ final class Utils {
         }
     }
 
-    @Nullable
-    static URL tryParseUrl(@Nullable String string) {
+
+    static URL tryParseUrl(String string) {
         if (string == null) {
             Log.w(TAG, "Null value while parsing url", new NullPointerException());
             return null;
@@ -300,7 +302,7 @@ final class Utils {
     }
 
     @NonNull
-    static URL nonNullUrl(@Nullable String string) {
+    static URL nonNullUrl(String string) {
         URL result = tryParseUrl(string);
         if (result == null) {
             Log.w(TAG, "Malformed URL replaced with 'http://'");
@@ -313,8 +315,8 @@ final class Utils {
         return result;
     }
 
-    @Nullable
-    static URI tryParseUri(@Nullable String string) {
+
+    static URI tryParseUri(String string) {
         if (string == null) {
             Log.w(TAG, "Null value while parsing uri", new NullPointerException());
             return null;
@@ -329,7 +331,7 @@ final class Utils {
     }
 
     @NonNull
-    static URI nonNullUri(@Nullable String string) {
+    static URI nonNullUri(String string) {
         URI result = tryParseUri(string);
         if (result == null) {
             Log.w(TAG, "Malformed URI replaced with 'http://'");

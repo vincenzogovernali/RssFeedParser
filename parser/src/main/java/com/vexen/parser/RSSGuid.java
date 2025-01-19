@@ -1,22 +1,22 @@
 package com.vexen.parser;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
 
 import java.io.IOException;
+
+import lombok.NonNull;
 
 public final class RSSGuid {
     static final String XML_TAG = "guid";
 
     @NonNull
     public final String value;
-    @Nullable
+
+
     public final Boolean isPermalink;
 
-    public RSSGuid(@NonNull String value, @Nullable Boolean isPermalink) {
+    public RSSGuid(@NonNull String value, Boolean isPermalink) {
         this.value = value;
         this.isPermalink = isPermalink;
     }

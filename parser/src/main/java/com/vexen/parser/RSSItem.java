@@ -2,9 +2,6 @@ package com.vexen.parser;
 
 import android.util.Log;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
 
@@ -17,36 +14,48 @@ import java.util.List;
 import java.util.Map;
 
 import lombok.AllArgsConstructor;
+import lombok.NonNull;
 
 @AllArgsConstructor
 public final class RSSItem implements Item {
     static final String XML_TAG = "item";
     private static final String TAG = "Earl.RSSItem";
-    @Nullable
+
+
     public final String title;
-    @Nullable
+
+
     public final URL link;
-    @Nullable
+
+
     public final String description;
-    @Nullable
+
+
     public final String author;
     @NonNull
     public final List<RSSCategory> categories;
-    @Nullable
+
+
     public final URL comments;
     @NonNull
     public final List<RSSEnclosure> enclosures;
-    @Nullable
+
+
     public final RSSGuid guid;
-    @Nullable
+
+
     public final Date pubDate;
-    @Nullable
+
+
     public final RSSSource source;
-    @Nullable
+
+
     public final ItunesItem itunes;
-    @Nullable
+
+
     public final MediaItem media;
-    @Nullable
+
+
     public final Content content;
 
 
@@ -133,19 +142,19 @@ public final class RSSItem implements Item {
                 contentBuilder == null ? null : contentBuilder.build());
     }
 
-    @Nullable
+
     @Override
     public String getLink() {
         return link == null ? null : link.toString();
     }
 
-    @Nullable
+
     @Override
     public Date getPublicationDate() {
         return pubDate;
     }
 
-    @Nullable
+
     @Override
     public String getTitle() {
         if (title != null) {
@@ -160,7 +169,7 @@ public final class RSSItem implements Item {
         return null;
     }
 
-    @Nullable
+
     @Override
     public String getDescription() {
         if (description != null) {
@@ -181,12 +190,12 @@ public final class RSSItem implements Item {
         return null;
     }
 
-    @Nullable
+
     public String getContentEncoded() {
         return content == null ? null : content.encoded;
     }
 
-    @Nullable
+
     @Override
     public String getImageLink() {
         if (itunes != null && itunes.image != null) {
@@ -198,7 +207,7 @@ public final class RSSItem implements Item {
         return null;
     }
 
-    @Nullable
+
     @Override
     public String getAuthor() {
         if (author != null) {
@@ -224,7 +233,7 @@ public final class RSSItem implements Item {
         return enclosures;
     }
 
-    @Nullable
+
     @Override
     public String getId() {
         return guid == null ? null : guid.value;

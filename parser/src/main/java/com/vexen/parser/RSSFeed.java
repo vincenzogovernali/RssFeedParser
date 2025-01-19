@@ -3,9 +3,6 @@ package com.vexen.parser;
 import android.text.TextUtils;
 import android.util.Log;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
 
@@ -18,6 +15,7 @@ import java.util.List;
 import java.util.Map;
 
 import lombok.AllArgsConstructor;
+import lombok.NonNull;
 
 @AllArgsConstructor
 public final class RSSFeed implements Feed {
@@ -30,33 +28,46 @@ public final class RSSFeed implements Feed {
     public final URL link;
     @NonNull
     public final String description;
-    @Nullable
+
+
     public final String language;
-    @Nullable
+
+
     public final String copyright;
-    @Nullable
+
+
     public final String managingEditor;
-    @Nullable
+
+
     public final String webMaster;
-    @Nullable
+
+
     public final Date pubDate;
-    @Nullable
+
+
     public final Date lastBuildDate;
     @NonNull
     public final List<RSSCategory> categories;
-    @Nullable
+
+
     public final String generator;
-    @Nullable
+
+
     public final URL docs;
-    @Nullable
+
+
     public final RSSCloud cloud;
-    @Nullable
+
+
     public final Integer ttl;
-    @Nullable
+
+
     public final String rating;
-    @Nullable
+
+
     public final RSSImage image;
-    @Nullable
+
+
     public final RSSTextInput textInput;
     @NonNull
     public final List<Integer> skipHours;
@@ -64,11 +75,14 @@ public final class RSSFeed implements Feed {
     public final List<String> skipDays;
     @NonNull
     public final List<RSSItem> items;
-    @Nullable
+
+
     public final ItunesFeed itunes;
-    @Nullable
+
+
     public final MediaCommon media;
-    @Nullable
+
+
     public final Content content;
 
     @NonNull
@@ -189,19 +203,19 @@ public final class RSSFeed implements Feed {
                 contentBuilder == null ? null : contentBuilder.build());
     }
 
-    @Nullable
+
     @Override
     public String getLink() {
         return link.toString();
     }
 
-    @Nullable
+
     @Override
     public Date getPublicationDate() {
         return pubDate;
     }
 
-    @Nullable
+
     @Override
     public Date getUpdatedDate() {
         return null;
@@ -219,7 +233,7 @@ public final class RSSFeed implements Feed {
         return TextUtils.isEmpty(description) && content != null ? content.encoded : description;
     }
 
-    @Nullable
+
     @Override
     public String getCopyright() {
         if (copyright != null) {
@@ -231,7 +245,7 @@ public final class RSSFeed implements Feed {
         return null;
     }
 
-    @Nullable
+
     @Override
     public String getImageLink() {
         if (image != null) {
@@ -246,7 +260,7 @@ public final class RSSFeed implements Feed {
         return null;
     }
 
-    @Nullable
+
     @Override
     public String getAuthor() {
         if (managingEditor != null) {

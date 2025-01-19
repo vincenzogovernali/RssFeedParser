@@ -1,19 +1,19 @@
 package com.vexen.parser;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-
 import org.xmlpull.v1.XmlPullParser;
 
 import java.net.URI;
 
 import lombok.AllArgsConstructor;
+import lombok.NonNull;
 
 @AllArgsConstructor
 public class AtomCommonAttributes {
-    @Nullable
+
+
     public final URI base;
-    @Nullable
+
+
     public final String lang;
 
 
@@ -24,7 +24,7 @@ public class AtomCommonAttributes {
         lang = parser.getAttributeValue(XmlPullParser.NO_NAMESPACE, "lang");
     }
 
-    AtomCommonAttributes(@Nullable AtomCommonAttributes source) {
+    AtomCommonAttributes(AtomCommonAttributes source) {
         if (source == null) {
             base = null;
             lang = null;

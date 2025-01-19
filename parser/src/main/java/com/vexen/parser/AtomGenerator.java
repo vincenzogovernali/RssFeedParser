@@ -1,26 +1,27 @@
 package com.vexen.parser;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
 
 import java.io.IOException;
 import java.net.URI;
 
+import lombok.NonNull;
+
 public final class AtomGenerator extends AtomCommonAttributes {
     static final String XML_TAG = "generator";
 
-    @Nullable
+
     public final URI uri;
-    @Nullable
+
+
     public final String version;
     @NonNull
     public final String value;
 
-    public AtomGenerator(@Nullable AtomCommonAttributes atomCommonAttributes, @Nullable URI uri,
-                         @Nullable String version, @NonNull String value) {
+    public AtomGenerator(AtomCommonAttributes atomCommonAttributes, URI uri,
+
+                         String version, @NonNull String value) {
         super(atomCommonAttributes);
         this.uri = uri;
         this.version = version;

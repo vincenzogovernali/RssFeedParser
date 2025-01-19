@@ -1,7 +1,5 @@
 package com.vexen.parser;
 
-import androidx.annotation.NonNull;
-
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
 
@@ -9,6 +7,8 @@ import java.io.IOException;
 import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
+
+import lombok.NonNull;
 
 public final class MediaItem extends MediaCommon {
     @NonNull

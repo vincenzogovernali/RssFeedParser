@@ -2,9 +2,6 @@ package com.vexen.parser;
 
 import android.util.Log;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
 
@@ -16,29 +13,39 @@ import java.util.List;
 import java.util.Map;
 
 import lombok.AllArgsConstructor;
+import lombok.NonNull;
 
 @AllArgsConstructor
 public final class ItunesFeed {
     private static final String TAG = "Earl.ItunesFeed";
-    @Nullable
+
+
     public final String author;
-    @Nullable
+
+
     public final Boolean block;
     @NonNull
     public final List<ItunesCategory> categories;
-    @Nullable
+
+
     public final URL image;
-    @Nullable
+
+
     public final String explicit;
-    @Nullable
+
+
     public final Boolean complete;
-    @Nullable
+
+
     public final URL newFeedURL;
-    @Nullable
+
+
     public final ItunesOwner owner;
-    @Nullable
+
+
     public final String subtitle;
-    @Nullable
+
+
     public final String summary;
 
     private enum ST {author, block, explicit, complete, subtitle, summary}

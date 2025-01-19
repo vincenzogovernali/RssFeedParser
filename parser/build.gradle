@@ -4,9 +4,9 @@ plugins {
 
 android {
     namespace "com.vexen.parser"
+    compileSdk 34
 
     defaultConfig {
-        compileSdk 34
         minSdk 21
     }
 
@@ -20,11 +20,9 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
-
 }
 
 dependencies {
-    implementation fileTree(include: ['*.jar'], dir: 'libs')
 
     // LOMBOK DEPENDENCY
     implementation "org.projectlombok:lombok:$lombokVersion"

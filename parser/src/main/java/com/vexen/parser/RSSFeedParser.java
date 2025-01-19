@@ -12,8 +12,8 @@ import java.util.zip.DataFormatException;
 import lombok.NonNull;
 
 
-public final class EarlParser {
-    private EarlParser() {
+public final class RSSFeedParser {
+    private RSSFeedParser() {
     }
 
     /**

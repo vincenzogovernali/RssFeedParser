@@ -3,22 +3,24 @@ plugins {
 }
 
 android {
-    compileSdk 34
+    namespace "com.vexen.parser"
 
     defaultConfig {
+        compileSdk 34
         minSdk 21
     }
 
     buildTypes {
         release {
             minifyEnabled true
-            multiDexEnabled true
         }
     }
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+
 }
 
 dependencies {

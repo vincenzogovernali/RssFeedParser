@@ -28,3 +28,16 @@ dependencies {
     annotationProcessor "org.projectlombok:lombok:$lombokVersion"
 
 }
+
+afterEvaluate {
+    publishing {
+        publications {
+            release(MavenPublication) {
+                from components.release
+                groupId = 'com.vexen'
+                artifactId = 'RssFeedParser'
+                version = '0.0.4'
+            }
+        }
+    }
+}

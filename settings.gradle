@@ -1,1 +1,2 @@
-include ':rssfeedparser'
+rootProject.name = "RssFeedParser"
+include ':parser'
